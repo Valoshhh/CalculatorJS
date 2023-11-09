@@ -1,0 +1,122 @@
+body {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    gap: 10px ;
+    grid-template-areas:
+        "display display display display"
+        "buttondivide button1 button2 button3"
+        "buttonmultiply button4 button5 button6"
+        "buttonsubtract button7 button8 button9"
+        "buttondivdee button0 buttongrid buttonequal";
+    margin: 10%;
+    width: 50%;
+    height: 50%;   
+    border: #3498db 7px solid;
+    border-radius: 40px;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.1);
+    padding: 25px;
+}
+
+input[type="text"] {
+    grid-area: display;
+    width: 100%;
+    grid-column: span 4;
+    height: 90%;
+    font-size: 300%; /* Ajouter cette ligne pour augmenter la taille de la police */
+    box-shadow: 5px 7px 10px rgba(0, 0, 0, 0.1);
+    border: #ffa200 1px solid ;
+    border-radius: 10px;
+}
+
+input[type="button"] {
+    width: 100%;
+    height: 100px;
+    border: none;
+    background: #3498db;
+    color: #ffffff;
+    font-size: 300%;
+    box-shadow: 5px 7px 10px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: background 0.4s, transform 0.2s;
+}
+
+input[type="button"]:hover {
+    background: yellow;
+    transform: scale(1.20);
+}
+
+input[value="1"] {
+    grid-area: button1;
+}
+
+input[value="2"] {
+    grid-area: button2;
+}
+
+input[value="3"] {
+    grid-area: button3;
+}
+
+input[value="4"] {
+    grid-area: button4;
+}
+
+input[value="5"] {
+    grid-area: button5;
+}
+
+input[value="6"] {
+    grid-area: button6;
+}
+
+input[value="7"] {
+    grid-area: button7;
+}
+
+input[value="8"] {
+    grid-area: button8;
+}
+
+input[value="9"] {
+    grid-area: button9;
+}
+
+input[value="0"] {
+    grid-area: button0;
+}
+
+input[value="="] {
+    grid-area: buttonequal;
+    background-color: orange;
+
+}
+
+input[value="C"] {
+    grid-area: buttongrid;
+    background-color: orange;
+}
+
+input[value="+"] {
+    grid-area: buttondivide;
+    background-color: orange;
+
+}
+
+input[value="-"] {
+    grid-area: buttonmultiply;
+    background-color: orange;
+
+}
+
+input[value="*"] {
+    grid-area: buttonsubtract;
+    background-color: orange;
+
+}
+
+input[value="/"] {
+    grid-area: buttondivdee;
+    background-color: orange;
+
+}
